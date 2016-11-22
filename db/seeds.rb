@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do 
+  title = Faker::ChuckNorris.fact
+  content = Lorem::Base.new('paragraphs', 1).output
+  post = Article.new(title: title, content: content)
+  post.save
+end
